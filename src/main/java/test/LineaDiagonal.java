@@ -12,6 +12,6 @@ public class LineaDiagonal {
         this.pincel=p;
     }
     public void dibujarLinea(GraphicsContext g){
-        g.fillRect(0,0, );
+        g.fillRect();
     }
 }
