@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-
+<?import javafx.scene.paint.Color?>
 
 <BorderPane fx:id="Panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <top>
@@ -12,10 +16,26 @@
          <children>
             <ToolBar prefHeight="100.0" prefWidth="942.0">
               <items>
-                <Button mnemonicParsing="false" text="Button" />
+                <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#abrirImagen" text="Nuevo" />
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarImagen" text="Guardar" />
+                  <Button fx:id="btnAbrir" mnemonicParsing="false" onAction="#abrirImagen" text="Abrir" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" translateX="420.0">
+                     <children>
+                        <ImageView fx:id="imgPinceles" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+                        <ComboBox fx:id="cmbPinceles" prefWidth="150.0" />
+                        <ColorPicker fx:id="cpkColor" onAction="#cambiarColor">
+                           <value>
+                              <Color />
+                           </value>
+                        </ColorPicker>
+                     </children>
+                  </HBox>
               </items>
             </ToolBar>
          </children>
       </HBox>
    </top>
+   <center>
+      <Canvas fx:id="cnvLienzo" height="479.0" onMouseDragged="#dibujarPunto" onMousePressed="#empezarDibujar" width="789.0" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>
