@@ -1,9 +1,10 @@
 package test;
 
 import clases.Pincel;
+import clases.Punto;
 import javafx.scene.canvas.GraphicsContext;
 
-import javax.swing.*;
+import java.awt.*;
 
 public class LineaDiagonal {
     private Pincel pincel;
@@ -12,6 +13,14 @@ public class LineaDiagonal {
         this.pincel=p;
     }
     public void dibujarLinea(GraphicsContext g){
-        g.fillRect();
+        double alto = Toolkit.getDefaultToolkit().getScreenSize().getHeight(); //(y)
+        double ancho = Toolkit.getDefaultToolkit().getScreenSize().getWidth(); //(x)
+        int x=0;
+        int y=0;
+        for (int i = 0; i<ancho; i++) {
+            x +=20;
+            y +=20;
+            this.pincel.dibujar(g,new Punto(x,y));
+        }
     }
 }
