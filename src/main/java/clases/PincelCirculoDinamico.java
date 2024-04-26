@@ -2,7 +2,7 @@ package clases;
 
 public class PincelCirculoDinamico implements PincelCirculo{
     public int radio;
-    PincelCirculoDinamico(int radio){
+   PincelCirculoDinamico(int radio){
 
         if (radio<0){
             throw new IllegalArgumentException("El radio debe ser positivo");
