@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class PincelTester extends Application {
-    public static final TipoPincel TIPO_PINCEL = null; //FALTA CAMBIAR
+    public static final TipoPincel TIPO_PINCEL = TipoPincel.PINCEL_GORDO; //FALTA CAMBIAR
 
     public static void main(String[] args) {
         launch(args);
@@ -24,7 +24,10 @@ public class PincelTester extends Application {
         GraphicsContext g= canvas.getGraphicsContext2D();
         g.setFill(Color.BLACK);
         primaryStage.setScene(scene);
-//        LineaDiagonal lineaDiagonal = new LineaDiagonal();
-//        lineaDiagonal.dibujarLinea(g);
+        LineaDiagonal lineaDiagonal = new LineaDiagonal(TIPO_PINCEL.getPincel());
+        lineaDiagonal.dibujarLinea(g);
+        primaryStage.show();
+
+
     }
 }

@@ -10,7 +10,7 @@ repositories {
     mavenCentral()
 }
 application{
-    mainClass="controlador.Programa"
+    mainClass="test.PincelTester"
 }
 javafx{
     modules("javafx.controls","javafx.fxml")
