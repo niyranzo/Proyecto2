@@ -10,7 +10,7 @@ repositories {
     mavenCentral()
 }
 application{
-    mainClass="controlador.Programa"
+    mainClass="aplicacion.Programa"
 }
 javafx{
     modules("javafx.controls","javafx.fxml")
