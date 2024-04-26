@@ -10,7 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class PincelTester extends Application {
-    public static final TipoPincel TIPO_PINCEL = TipoPincel.PINCEL_GORDO; //FALTA CAMBIAR
+    public static final TipoPincel TIPO_PINCEL = TipoPincel.PINCEL_CONTINUO;
 
     public static void main(String[] args) {
         launch(args);
