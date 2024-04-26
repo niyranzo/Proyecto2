@@ -4,8 +4,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
-import java.security.PublicKey;
-
 public class testPincelCirculoDinamico2 {
     @Test
     public void test1(){
