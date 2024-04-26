@@ -1,7 +1,6 @@
 package test;
 
 import clases.Pincel;
-import clases.Punto;
 import clases.TipoPincel;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -12,7 +11,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class PincelTester extends Application {
-    public static final TipoPincel TIPO_PINCEL = TipoPincel.PINCEL_CONTINUO;
+    public static final TipoPincel TIPO_PINCEL = TipoPincel.PINCEL_GROSOR_VARIABLE;
 
     public static void main(String[] args) {
         launch(args);

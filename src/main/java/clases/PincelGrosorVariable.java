@@ -16,10 +16,10 @@ public class PincelGrosorVariable extends PincelCirculoDinamico{
         this.radioMinimo=min;
     }
     public int getRadioMinimo(){
-        throw new UnsupportedOperationException();
+        return this.radioMinimo;
     }
     public int getRadioMaximo(){
-        throw new UnsupportedOperationException();
+        return this.radioMaximo;
     }
     @Override
     public void setRadio(int radio) {
