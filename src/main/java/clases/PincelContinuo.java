@@ -4,7 +4,9 @@ import javafx.scene.canvas.GraphicsContext;
 
 public class PincelContinuo extends PincelBasico implements Reseteable{
     private Punto puntoPrevio;
-
+    PincelContinuo(){
+        this.puntoPrevio=null;
+    }
 
     @Override
     public void resetear() {
