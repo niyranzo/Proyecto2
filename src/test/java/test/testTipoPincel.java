@@ -1,4 +1,4 @@
-package clases.test;
+package test;
 
 import clases.Pincel;
 import clases.PincelContinuo;
