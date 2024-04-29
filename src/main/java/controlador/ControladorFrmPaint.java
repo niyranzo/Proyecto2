@@ -119,7 +119,7 @@ public class ControladorFrmPaint implements Initializable{
         try {
             Robot r= new Robot();
             Rectangle rec= new Rectangle();
-            rec.setBounds((int)b.getMinX(), (int)b.getMinY(), (int)b.getMaxX(), (int)b.getMaxY());
+            rec.setBounds((int)b.getMinX(), (int)b.getMinY(), 789, 479);
             BufferedImage image=r.createScreenCapture(rec);
             JFileChooser j= new JFileChooser();
             j.showOpenDialog(null);
