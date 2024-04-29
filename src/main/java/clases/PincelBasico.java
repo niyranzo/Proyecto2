@@ -10,6 +10,6 @@ public class PincelBasico implements PincelCirculo{
 
     @Override
     public String toString() {
-        return "Pincel básico";
+        return "Pincel basico";
     }
 }

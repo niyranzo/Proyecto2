@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+
+<BorderPane fx:id="Panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorFrmPaint">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar prefHeight="100.0" prefWidth="942.0">
+              <items>
+                <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevaImagen" />
+                  <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarImagen" />
+                  <Button fx:id="btnAbrir" mnemonicParsing="false" onAction="#abrirImagen" />
+                  <HBox prefHeight="100.0" prefWidth="226.0" translateX="350.0">
+                     <children>
+                        <ImageView fx:id="imgPinceles" fitHeight="54.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets top="-12.0" />
+                           </HBox.margin></ImageView>
+                        <ComboBox fx:id="cmbPinceles" prefHeight="26.0" prefWidth="118.0">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin></ComboBox>
+                        <ColorPicker fx:id="cpkColor" onAction="#cambiarColor" prefHeight="26.0" prefWidth="31.0">
+                           <value>
+                              <Color />
+                           </value>
+                        </ColorPicker>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="30.0" />
+                     </padding>
+                  </HBox>
+              </items>
+            </ToolBar>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <Canvas fx:id="cnvLienzo" height="479.0" onMouseDragged="#dibujarPunto" onMousePressed="#empezarDibujar" width="789.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
