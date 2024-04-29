@@ -1,4 +1,4 @@
-package clases.test;
+package test;
 
 import clases.Punto;
 import org.junit.Test;
