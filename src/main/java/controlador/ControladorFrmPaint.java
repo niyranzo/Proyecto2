@@ -3,6 +3,7 @@ package controlador;
 import clases.Pincel;
 import clases.Punto;
 import clases.Reseteable;
+import clases.TipoPincel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Bounds;
@@ -28,7 +29,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -63,12 +63,14 @@ public class ControladorFrmPaint implements Initializable{
         this.imgPinceles.setImage(new Image(ClassLoader.getSystemResourceAsStream("Pencil-icon.png")));
     }
     public void inicializarComboBox(){
-        List<Pincel> pinceles= new ArrayList<>();
+        List<Pincel> pinceles= TipoPincel.getPinceles();
         this.cmbPinceles.getItems().setAll(pinceles);
+        this.cmbPinceles.setValue(pinceles.getFirst());
         this.cmbPinceles.setOnAction(event -> {
             this.cmbPinceles.getValue();
         });
     }
+
     public void nuevaImagen(){
         GraphicsContext grafico=this.cnvLienzo.getGraphicsContext2D();
         Paint paint=grafico.getFill();
@@ -84,11 +86,11 @@ public class ControladorFrmPaint implements Initializable{
         j.showOpenDialog(null);
         File file= j.getSelectedFile();
         try {
-            URL url= file.toURL();
+            URL url= file.toURI().toURL();
             Image image= new Image(url.toString());
-            this.cnvLienzo.getGraphicsContext2D().drawImage(image, image.getHeight(), image.getWidth());
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
+            this.cnvLienzo.getGraphicsContext2D().drawImage(image, 0,0,789,479);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());;
         }
     }
 
@@ -117,12 +119,12 @@ public class ControladorFrmPaint implements Initializable{
         try {
             Robot r= new Robot();
             Rectangle rec= new Rectangle();
-            rec.setBounds((int)b.getCenterX(), (int)b.getCenterY(), (int)b.getWidth(), (int)b.getHeight());
+            rec.setBounds((int)b.getMinX(), (int)b.getMinY(), (int)b.getMaxX(), (int)b.getMaxY());
             BufferedImage image=r.createScreenCapture(rec);
             JFileChooser j= new JFileChooser();
             j.showOpenDialog(null);
             File file= j.getSelectedFile();
-            ImageIO.write(image, "png", file);
+            ImageIO.write(image, "PNG", file);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

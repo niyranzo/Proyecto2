@@ -17,17 +17,20 @@
          <children>
             <ToolBar prefHeight="100.0" prefWidth="942.0">
               <items>
-                <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#abrirImagen" />
+                <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevaImagen" />
                   <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarImagen" />
                   <Button fx:id="btnAbrir" mnemonicParsing="false" onAction="#abrirImagen" />
-                  <HBox prefHeight="100.0" prefWidth="200.0" translateX="420.0">
+                  <HBox prefHeight="100.0" prefWidth="226.0" translateX="350.0">
                      <children>
                         <ImageView fx:id="imgPinceles" fitHeight="54.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
                               <Insets top="-12.0" />
                            </HBox.margin></ImageView>
-                        <ComboBox fx:id="cmbPinceles" prefWidth="150.0" />
-                        <ColorPicker fx:id="cpkColor" onAction="#cambiarColor">
+                        <ComboBox fx:id="cmbPinceles" prefHeight="26.0" prefWidth="118.0">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin></ComboBox>
+                        <ColorPicker fx:id="cpkColor" onAction="#cambiarColor" prefHeight="26.0" prefWidth="31.0">
                            <value>
                               <Color />
                            </value>
