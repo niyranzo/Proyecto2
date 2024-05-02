@@ -32,5 +32,6 @@ public class LapizJavaFX implements Lapiz{
 
     @Override
     public void dibujarImagen(Image imagen, double x, double y) {
+        this.graphics.drawImage(imagen, x, y);
     }
 }
