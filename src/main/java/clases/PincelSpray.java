@@ -2,6 +2,8 @@ package clases;
 
 import javafx.scene.canvas.GraphicsContext;
 
+import java.util.Random;
+
 public class PincelSpray extends PincelCirculoDinamico{
     private Pincel pincel;
     private int densidad;
@@ -12,13 +14,19 @@ public class PincelSpray extends PincelCirculoDinamico{
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return "Pincel Spray";
     }
     @Override
     public void dibujar(GraphicsContext g, Punto p) {
-        //sinhacer
-        g.fillRect(p.x(),p.y(),10,10);
+        Random random =new Random();
+        double r=0;
+        double gr=0;
+        for(int i=0; i<this.densidad;i++){
+            r=random.nextInt(1, this.radio);
+            gr=random.nextDouble(0, 360);
+            double a= Math.toRadians(gr);
+            this.pincel.dibujar(g, new Punto(p.x()+r*Math.cos(a),p.y()+r*Math.sin(a)));
+        }
     }
-
 }
