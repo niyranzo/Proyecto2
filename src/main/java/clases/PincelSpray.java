@@ -18,7 +18,7 @@ public class PincelSpray extends PincelCirculoDinamico{
         return "Pincel Spray";
     }
     @Override
-    public void dibujar(GraphicsContext g, Punto p) {
+    public void dibujar(Lapiz g, Punto p) {
         Random random =new Random();
         double r=0;
         double gr=0;

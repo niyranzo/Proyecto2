@@ -29,7 +29,7 @@ public class PincelSorpresa implements Pincel{
         return randomP;
     }
     @Override
-    public void dibujar(GraphicsContext g, Punto p) {
+    public void dibujar(Lapiz g, Punto p) {
         this.getPincelAleatorio().dibujar(g,p);
     }
 }
