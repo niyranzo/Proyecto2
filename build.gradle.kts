@@ -13,7 +13,7 @@ application{
     mainClass="aplicacion.Programa"
 }
 javafx{
-    modules("javafx.controls","javafx.fxml")
+    modules("javafx.controls","javafx.fxml","javafx.swing")
     version="21"
 }
 
