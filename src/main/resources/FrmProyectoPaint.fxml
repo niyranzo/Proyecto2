@@ -35,6 +35,7 @@
                               <Color />
                            </value>
                         </ColorPicker>
+                        <ComboBox fx:id="cmbCapas" prefWidth="150.0" />
                      </children>
                      <opaqueInsets>
                         <Insets />
