@@ -13,12 +13,11 @@ application{
     mainClass="aplicacion.Programa"
 }
 javafx{
-    modules("javafx.controls","javafx.fxml")
+    modules("javafx.controls","javafx.fxml","javafx.swing")
     version="21"
 }
 
 dependencies {
-    implementation("junit:junit:4.13.1")
     testImplementation("junit:junit:4.13.2")
 }
 
