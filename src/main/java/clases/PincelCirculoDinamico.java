@@ -21,8 +21,4 @@ public class PincelCirculoDinamico implements PincelCirculo{
         return this.radio;
     }
 
-
-    @Override
-    public void dibujar(Lapiz g, Punto p) {
-    }
 }

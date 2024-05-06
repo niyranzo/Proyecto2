@@ -9,7 +9,7 @@ public class PincelRectangulo implements Pincel{
 
     @Override
     public void dibujar(Lapiz g, Punto p) {
-        g.dibujarLinea(p.x(),p.y(),10,10);
+        g.dibujarRectangulo(p.x(),p.y(),10,10);
     }
 
     @Override

@@ -21,7 +21,7 @@ public class PincelContinuo extends PincelBasico implements Reseteable{
     @Override
     public void dibujar(Lapiz g, Punto p) {
         super.dibujar(g, p);
-        g.dibujarLinea(p.x(), p.y(), puntoPrevio.x(), puntoPrevio.y());
+        g.dibujarLinea(p.x(), p.y(), p.x(), p.y());
         //Comprobar que funcione
 
         if (this.puntoPrevio == null){

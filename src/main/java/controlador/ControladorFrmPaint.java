@@ -1,9 +1,6 @@
 package controlador;
 
-import clases.Pincel;
-import clases.Punto;
-import clases.Reseteable;
-import clases.TipoPincel;
+import clases.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Bounds;
@@ -102,7 +99,7 @@ public class ControladorFrmPaint implements Initializable{
     }
     @FXML
     public void dibujarPunto(MouseEvent event) {
-        this.cmbPinceles.getValue().dibujar(this.cnvLienzo.getGraphicsContext2D(), new Punto(event.getX(), event.getY()));
+        this.cmbPinceles.getValue().dibujar(new LapizJavaFX(this.cnvLienzo.getGraphicsContext2D()), new Punto(event.getX(), event.getY()));
     }
 
     @FXML
