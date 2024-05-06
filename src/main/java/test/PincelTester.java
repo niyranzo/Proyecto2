@@ -1,6 +1,5 @@
 package test;
 
-<<<<<<<<< Temporary merge branch 1
 import clases.TipoPincel;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -19,20 +18,16 @@ public class PincelTester extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Canvas canvas = new Canvas(400,400);
+        Canvas canvas = new Canvas(400, 400);
         StackPane stackPane = new StackPane(canvas);
         Scene scene = new Scene(stackPane);
-        GraphicsContext g= canvas.getGraphicsContext2D();
+        GraphicsContext g = canvas.getGraphicsContext2D();
         g.setFill(Color.BLACK);
         primaryStage.setScene(scene);
         LineaDiagonal lineaDiagonal = new LineaDiagonal(TIPO_PINCEL.getPincel());
         lineaDiagonal.dibujarLinea(g);
         primaryStage.show();
 
-
     }
-=========
-public class PincelTester {
-    
->>>>>>>>> Temporary merge branch 2
 }
+

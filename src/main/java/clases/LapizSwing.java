@@ -4,9 +4,11 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
+import java.awt.*;
+
 public class LapizSwing implements Lapiz{
-    private GraphicsContext graphics;
-    public LapizSwing(GraphicsContext g){
+    private Graphics graphics;
+    public LapizSwing(Graphics g){
         this.graphics=g;
     }
 
