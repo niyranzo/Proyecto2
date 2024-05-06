@@ -20,7 +20,7 @@
                 <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevaImagen" />
                   <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarImagen" />
                   <Button fx:id="btnAbrir" mnemonicParsing="false" onAction="#abrirImagen" />
-                  <HBox prefHeight="100.0" prefWidth="226.0" translateX="350.0">
+                  <HBox prefHeight="100.0" prefWidth="437.0" translateX="100.0">
                      <children>
                         <ImageView fx:id="imgPinceles" fitHeight="54.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
@@ -34,8 +34,16 @@
                            <value>
                               <Color />
                            </value>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
                         </ColorPicker>
-                        <ComboBox fx:id="cmbCapas" prefWidth="150.0" />
+                        <Button fx:id="btnAddCapa" mnemonicParsing="false" text="Añadir">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <ComboBox fx:id="cmbCapas" prefHeight="26.0" prefWidth="122.0" />
                      </children>
                      <opaqueInsets>
                         <Insets />

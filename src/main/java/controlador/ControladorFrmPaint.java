@@ -30,10 +30,12 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class ControladorFrmPaint implements Initializable{
-    public ComboBox<Lapiz> cmbCapas;
+    @FXML
+    private ComboBox<?> cmbCapas;
     @FXML
     private BorderPane Panel;
-
+    @FXML
+    private Button btnAddCapa;
     @FXML
     private Button btnAbrir;
 
