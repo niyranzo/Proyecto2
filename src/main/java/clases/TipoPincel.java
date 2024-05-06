@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public enum TipoPincel{
-    PINCEL_BASICO(new PincelBasico()),PINCEL_GORDO(new PincelGordo()),PINCEL_GROSOR_VARIABLE(new PincelGrosorVariable(2,20)),PINCEL_CONTINUO(new PincelContinuo()),PINCEL_RECTANGULO(new PincelRectangulo()),PINCEL_ESTRELLA(new PincelEstrella());
+    PINCEL_BASICO(new PincelBasico()),PINCEL_GORDO(new PincelGordo()),PINCEL_GROSOR_VARIABLE(new PincelGrosorVariable(2,20)),PINCEL_CONTINUO(new PincelContinuo()),PINCEL_RECTANGULO(new PincelRectangulo()),PINCEL_ESTRELLA(new PincelEstrella()),PINCEL_SPRAY(new PincelSpray(new PincelGrosorVariable(2,15),70,15)),PINCEL_GALLETA(new PincelGalletas(new PincelEstrella(),20,10)),PINCEL_SORPRESA(new PincelSorpresa()), PINCEL_PSICODELICO(new PincelPsicodelico());
 
     private Pincel pincel;
 

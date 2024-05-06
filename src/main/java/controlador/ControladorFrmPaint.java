@@ -31,7 +31,7 @@ import java.util.ResourceBundle;
 
 public class ControladorFrmPaint implements Initializable{
     @FXML
-    private ComboBox<?> cmbCapas;
+    private ComboBox<Capa> cmbCapas;
     @FXML
     private BorderPane Panel;
     @FXML
