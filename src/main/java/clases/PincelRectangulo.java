@@ -8,8 +8,8 @@ public class PincelRectangulo implements Pincel{
 
 
     @Override
-    public void dibujar(GraphicsContext g, Punto p) {
-        g.fillRect(p.x(),p.y(),10,10);
+    public void dibujar(Lapiz g, Punto p) {
+        g.dibujarRectangulo(p.x(),p.y(),10,10);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package test;
 
+import clases.Lapiz;
 import clases.Pincel;
 import clases.Punto;
 import javafx.scene.canvas.GraphicsContext;
@@ -12,7 +13,7 @@ public class LineaDiagonal {
     public LineaDiagonal(Pincel p){
         this.pincel=p;
     }
-    public void dibujarLinea(GraphicsContext g){
+    public void dibujarLinea(Lapiz g){
         double alto = Toolkit.getDefaultToolkit().getScreenSize().getHeight(); //(y)
         double ancho = Toolkit.getDefaultToolkit().getScreenSize().getWidth(); //(x)
         int x=0;

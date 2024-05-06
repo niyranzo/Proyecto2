@@ -29,7 +29,7 @@ public class PincelGrosorVariable extends PincelCirculoDinamico{
         this.radio=radio;
     }
     @Override
-    public void dibujar(GraphicsContext g, Punto p) {
+    public void dibujar(Lapiz g, Punto p) {
         super.dibujar(g, p);
         Random random = new Random();
         this.radio=random.nextInt(this.radioMinimo, this.radioMaximo);

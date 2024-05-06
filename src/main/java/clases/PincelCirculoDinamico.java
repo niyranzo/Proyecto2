@@ -20,4 +20,5 @@ public class PincelCirculoDinamico implements PincelCirculo{
     public int getRadio() {
         return this.radio;
     }
+
 }

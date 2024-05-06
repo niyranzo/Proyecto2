@@ -19,8 +19,8 @@ public class PincelPsicodelico extends PincelSorpresa{
         return new Color(random.nextDouble(),random.nextDouble(),random.nextDouble(),1.0);
     }
     @Override
-    public void dibujar(GraphicsContext g, Punto p) {
-        g.setFill(this.getColorAleatorio());
+    public void dibujar(Lapiz g, Punto p) {
+        g.setColor(this.getColorAleatorio());
         PincelSorpresa sorpresa=new PincelSorpresa();
         sorpresa.dibujar(g,p);
     }
